@@ -1,0 +1,380 @@
+@import url('html5reset.css');
+@import url(http://fonts.googleapis.com/css?family=PT+Sans);
+@import url(http://fonts.googleapis.com/css?family=Oxygen:400,700);
+
+html    {
+    background-image:url(cloud6.png);
+    background-position:32%;
+    background-size: 400px;
+    background-repeat:no-repeat;
+}
+
+body    {
+    perspective: 1000px;
+    perspective-origin: 50% 50%;
+    font-family: "PT Sans" sans-serif;
+    font-size:1em;
+    width: 100%;
+}
+
+div[role="article"]:not(.summary), footer {
+    clear:both;
+    position: absolute;
+    float:right;
+    padding: 10px;
+    height: 480px;
+    width: 480px;
+    opacity:.85;
+    top:230px;
+    right:32%;
+    background-color: #f5f9ff; 
+    transform-style: preserve-3d;
+    transition: transform 0.2s ease-in;
+}
+
+
+div[role="article"]:hover   {
+    z-index:2;
+}
+
+footer a {
+    color:#6395ff;
+}
+
+div.summary {
+    opacity: 1;
+    position:absolute;
+    background-image:url(cloud2.png); 
+    top:10px;
+    /*float:right;*/
+    /*right:1%;*/
+    width:210px;
+    height:600px;
+    padding:15px;
+    text-align: right;
+    border:none;
+
+}
+
+h1   {
+    text-align: right;
+    letter-spacing: .5em;
+    padding-top: 20px;
+    color:#e1c059;
+    background:url(cloud3.jpg);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:transparent;
+    font-size:3em;
+    left:20px;
+    right:10px;
+    margin:1px;
+}
+
+ h2   {
+    padding:2px;
+    padding-right:6px;
+    text-align: right;
+    font-family:"Oxygen", sans-serif;
+    left:10%;
+    color:#fff;
+    background-color: #ddd;
+}
+
+h3  {
+    font-size: 1.5em;
+    color:grey;
+}
+
+
+#zen-preamble {
+    /*transform: translateZ(200px);*/
+    z-index:1;
+    text-align: center;
+}
+
+#zen-requirements {
+    transform: translateZ(-499px) rotateY(180deg);
+    text-align: center
+}
+
+#zen-participation {
+    transform: rotateY(-270deg) translateX(499px) translateZ(50px);
+    transform-origin: center right;
+    text-align: center
+}
+
+#zen-explanation {
+    transform: rotateY(270deg) translateX(-499px) translateZ(50px);
+    transform-origin: center left;
+    text-align: center
+}
+
+#zen-benefits {
+    transform: rotateX(-270deg) translateY(-499px) translateZ(50px);
+    transform-origin: top center;
+    text-align: center
+}
+
+footer  {
+    transform: rotateX(270deg) translateY(499px) translateZ(50px);
+    transform-origin: bottom center;
+    bottom: 10px
+    text-align: center
+}
+
+aside   {
+    position:relative;
+    padding:8px;
+    padding-top: 160px;
+    float:right;
+    right:0;
+    top:80px;
+    width:260px;
+    height:400%;
+    min-height:460px;
+    background-image: url('cloud1.png');
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    background-size: 300%;
+    background-opacity:.5;
+    color:#2d2d2d;
+}
+
+aside p {
+    bottom:0;
+}
+
+
+a {
+    text-decoration:none;
+    color:#162f63;
+}
+
+a:hover {
+    background-image:url(cloud4.png)
+    background-size:60px 30px;
+    -webkit-text-fill-color:transparent;
+
+}
+li  {
+    /*text-align: left;*/
+    list-style: none;
+    text-indent: none;
+}
+
+
+
+/* M   E   D    I    U    M*/
+
+
+
+@media all and (min-width:320px) and (max-width:1000px) {
+body    {
+    perspective: none;
+}
+
+html    {
+    background-position:50% 60%;
+    background-size: 50%;
+}
+
+h1 {
+    float:none;
+    display:inline-block;
+    padding:0;
+    padding-top:5px;
+
+}
+
+h2  {
+    /*position:fixed;*/
+    clear:both;
+    float:none;
+    margin: 0;
+    padding-top:0;
+}
+
+div.summary {
+    position:relative;
+    margin-top: -10px;
+
+}
+
+aside   {
+    position:fixed;
+    float:right;
+    display:inline-block;
+    top:100px;
+    height:550px;
+    padding-top:8%;
+    top:150px;
+    width: 30%;
+    z-index: -1;
+}
+
+aside p {
+    top:60px;
+    max-height:540px;
+}
+
+div[role="article"]:not(.summary), footer {
+    clear:both;
+    position:relative;
+    float:right;
+    padding:15px;
+    box-sizing: none;
+    right:37%;
+    height: initial;
+    width: 53%;
+    top:initial;
+    border: none;
+}
+
+div[role="article"]:hover   {
+    z-index:initial;
+}
+
+#zen-preamble {
+    margin-top:-200px;
+    margin-bottom: 50px;
+    padding-bottom:300px;
+    text-align:center;
+    background-color:;
+    z-index:initial;
+}
+
+#zen-explanation {
+    transform: none;
+    text-align: right;
+    width:40%;
+}
+
+#zen-participation {
+    transform: none;
+    margin: 50px 0 200px 0;
+
+}
+
+#zen-benefits {
+    transform: none;
+    text-align:left;
+    width:40%;
+    margin-bottom: 35px;
+    float:left;
+    left:6.8%;
+    padding:80px 0 90px 10px;
+}
+
+#zen-requirements {
+    transform: none;
+    clear:both;
+    margin-bottom: 10px;
+    padding-top:280px;
+}
+
+
+footer  {
+    transform: none;
+    background-image: url('cloud2.png');
+    background-repeat: no-repeat;
+    background-size: 300%;
+    background-opacity:.5;
+    text-align:center;
+    word-spacing: 2em;
+    letter-spacing:1.2em;
+}
+
+footer a {
+    color:white;
+}
+
+
+
+
+/* M    O    B     I     L     E*/
+
+
+
+
+@media all and (min-width:320px) and (max-width:620px) {
+
+
+html    {
+    background-position:50% 60%;
+    background-size: 50%;
+    margin:0;
+}
+
+aside   {
+    position:static;
+    opacity:.9;
+    float:none;
+    margin-left:7%;
+    margin-top:10%;
+    height: 100%
+    padding:5%;
+    padding-top:80%;
+    padding-bottom: 0;
+    width: 80%;
+    z-index: -1;
+}
+
+div[role="article"]:not(.summary), footer {
+    clear:both;
+    position:relative;
+    float:none;
+    padding:30px;
+    right:auto;
+    width: 80%;
+    top:initial;
+    border: none;
+}
+
+#zen-preamble {
+    margin-left: 6%;
+    margin-top:-50%;
+}
+
+#zen-explanation {
+    width:50%;
+    margin-left: 16%;
+}
+
+#zen-participation {
+    margin:auto;
+    margin-top: 10%; 
+    margin-bottom: 45%;
+
+}
+
+#zen-benefits {
+    margin-bottom: 10%;
+    float:right;
+    left:0;
+    padding:20% 3% 20% 2%;
+}
+
+#zen-requirements {
+    transform: none;
+    clear:both;
+    margin:auto;
+    margin-bottom: 2%;
+    padding-top:50%;
+}
+
+
+footer  {
+    position:relative;
+    margin:auto;
+    margin-bottom: 0;
+    transform: none;
+    background-image: url('cloud2.png');
+    background-repeat: no-repeat;
+    background-size: 300%;
+    background-opacity:.5;
+    text-align:center;
+    word-spacing: 2em;
+    letter-spacing:1.2em;
+}
+
+}
